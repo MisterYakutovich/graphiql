@@ -6,7 +6,7 @@
   "homepage": "https://MisterYakutovich.github.io/graphiql",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "tsc && vite build",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext .ts,.tsx --fix",
