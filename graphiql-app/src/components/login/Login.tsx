@@ -5,7 +5,7 @@ import { useLanguage } from '../../context/LanguageProvider';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import { MAIN_ROUTE } from '../../utils/consts';
-import { auth, signInWithGoogle } from '../../main';
+import { auth, signInWithGoogle } from '../../firebase/firebase';
 
 const Login: FC = () => {
   const [userAuth, loading] = useAuthState(auth);

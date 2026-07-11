@@ -10,7 +10,7 @@ import { FC, useEffect } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import SwitchLanguages from '../localization/Languages';
 import { useLanguage } from '../../context/LanguageProvider';
-import { auth } from '../../main';
+import { auth } from '../../firebase/firebase';
 
 const Header: FC = () => {
   const { language, translations } = useLanguage();

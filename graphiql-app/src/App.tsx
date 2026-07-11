@@ -17,7 +17,7 @@ import { FC } from 'react';
 import Loader from './components/loader/Loader';
 import Register from './components/registration/Register';
 import Main from './pages/main/Main';
-import { auth } from './main';
+import { auth } from './firebase/firebase';
 
 const App: FC = () => {
   const [user, loading] = useAuthState(auth);
@@ -43,9 +43,7 @@ const App: FC = () => {
 
   return (
     <>
-      <BrowserRouter
-        basename={process.env.NODE_ENV === 'production' ? '/graphiql' : '/'}
-      >
+      <BrowserRouter basename={import.meta.env.PROD ? '/graphiql' : '/'}>
         <Header />
         {renderRoutes()}
         <Footer />

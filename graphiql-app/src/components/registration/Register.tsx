@@ -9,8 +9,7 @@ import IFormInput from '../../types/interfase';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useLanguage } from '../../context/LanguageProvider';
-
-import { auth, db, signInWithGoogle } from '../../main';
+import { auth, db, signInWithGoogle } from '../../firebase/firebase';
 
 const Register: FC = () => {
   const { language, translations } = useLanguage();
